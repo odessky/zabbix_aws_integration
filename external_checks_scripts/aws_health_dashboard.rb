@@ -13,7 +13,7 @@ metadata_endpoint = 'http://169.254.169.254/latest/meta-data/'
 local_hostname = Net::HTTP.get(URI.parse(metadata_endpoint + '/local-hostname'))
 region = ARGV[1] || local_hostname.split('.')[1]
 
-url = "http://status.aws.amazon.com/rss/#{svc}-#{region}.rss"
+url = "https://status.aws.amazon.com/rss/#{svc}-#{region}.rss"
 
 begin
   xml_data = Net::HTTP.get_response(URI.parse(url)).body

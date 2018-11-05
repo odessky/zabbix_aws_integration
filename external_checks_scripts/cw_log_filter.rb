@@ -2,6 +2,7 @@
 
 require 'aws-sdk-core'
 require 'net/http'
+require 'aws-sdk-cloudwatchlogs'
 
 if ARGV.size < 3
   puts "Usage: #{$PROGRAM_NAME} [LOG_GROUP_NAME] \
